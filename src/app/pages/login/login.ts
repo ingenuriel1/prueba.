@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 import { LoginService } from '../../services/login';
 
 @Component({
@@ -12,6 +13,7 @@ import { LoginService } from '../../services/login';
 export class Login {
   private fb = inject(FormBuilder);
   private loginService = inject(LoginService);
+  private router = inject(Router);
 
   loginForm: FormGroup = this.fb.group({
     usuario: ['', Validators.required],
@@ -33,7 +35,7 @@ export class Login {
       next: (response) => {
         this.cargando = false;
         if (response.success) {
-          this.mensaje = 'Login exitoso';
+          this.router.navigate(['/dashboard']);
         } else {
           this.mensaje = response.mensaje || 'Error de autenticación';
         }
