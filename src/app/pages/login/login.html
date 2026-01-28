@@ -1,1 +1,41 @@
-<p>login works!</p>
+<div class="login-container">
+  <h2>Iniciar Sesión</h2>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="usuario">Usuario</label>
+      <input
+        type="text"
+        id="usuario"
+        formControlName="usuario"
+        placeholder="Ingrese su usuario">
+      @if (loginForm.get('usuario')?.invalid && loginForm.get('usuario')?.touched) {
+        <span class="error">El usuario es requerido</span>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="clave">Contraseña</label>
+      <input
+        type="password"
+        id="clave"
+        formControlName="clave"
+        placeholder="Ingrese su contraseña">
+      @if (loginForm.get('clave')?.invalid && loginForm.get('clave')?.touched) {
+        <span class="error">La contraseña es requerida</span>
+      }
+    </div>
+
+    <button type="submit" [disabled]="loginForm.invalid || cargando">
+      @if (cargando) {
+        Cargando...
+      } @else {
+        Ingresar
+      }
+    </button>
+
+    @if (mensaje) {
+      <p class="mensaje">{{ mensaje }}</p>
+    }
+  </form>
+</div>
