@@ -9,7 +9,18 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './buscador.css',
 })
 export class Buscador {
-  @Input() lista: string[] = [];
+  @Input() lista: string[] = [
+    'Angular',
+    'React',
+    'Vue',
+    'Svelte',
+    'TypeScript',
+    'JavaScript',
+    'Node.js',
+    'Python',
+    'Java',
+    'C#'
+  ];
 
   textoBusqueda: string = '';
 
