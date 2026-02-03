@@ -1,0 +1,18 @@
+<div class="buscador-container">
+  <input
+    type="text"
+    [(ngModel)]="textoBusqueda"
+    placeholder="Buscar..."
+    class="input-busqueda"
+  />
+
+  <ul class="lista-resultados">
+    <li *ngFor="let item of resultadosFiltrados" class="item-resultado">
+      {{ item }}
+    </li>
+  </ul>
+
+  <p *ngIf="resultadosFiltrados.length === 0" class="sin-resultados">
+    No se encontraron resultados
+  </p>
+</div>

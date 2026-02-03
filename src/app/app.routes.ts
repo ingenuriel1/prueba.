@@ -13,5 +13,9 @@ export const routes: Routes = [
     path: 'dashboard',
     loadComponent: () => import('./pages/dashboard/dashboard').then(m => m.Dashboard)
   },
+  {
+    path: 'buscador',
+    loadComponent: () => import('./components/buscador/buscador').then(m => m.Buscador)
+  },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];

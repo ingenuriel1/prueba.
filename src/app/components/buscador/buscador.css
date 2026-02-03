@@ -1,0 +1,38 @@
+.buscador-container {
+  padding: 1rem;
+  max-width: 400px;
+}
+
+.input-busqueda {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.input-busqueda:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.lista-resultados {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item-resultado {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+
+.item-resultado:hover {
+  background-color: #f5f5f5;
+}
+
+.sin-resultados {
+  color: #666;
+  font-style: italic;
+}
