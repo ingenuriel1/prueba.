@@ -1,8 +1,80 @@
-<div class="home-container">
-  <h1>Bienvenido</h1>
-
-  <div class="button-group">
-    <button class="btn btn-primary" routerLink="/login">Login</button>
-    <button class="btn btn-success" routerLink="/dashboard">Dashboard</button>
+<div class="home-wrapper">
+  <!-- Barra de Accesibilidad -->
+  <div class="position-fixed top-50 translate-middle-y" style="right: 0; z-index: 1200;">
+    <div class="barra-accesibilidad-govco d-none d-lg-flex">
+      <button class="contrast" aria-label="Cambiar contraste">
+        <span class="govco-contrast"></span>
+      </button>
+      <button class="decrease-font-size" aria-label="Disminuir letra" data-decrease-limit="-5">
+        <span class="govco-font-minimize"></span>
+      </button>
+      <button class="increase-font-size" aria-label="Aumentar letra" data-increase-limit="5">
+        <span class="govco-font-maximize"></span>
+      </button>
+    </div>
   </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">Bienvenido al Sistema</h1>
+        <p class="hero-subtitle">Gestiona tus procesos de manera eficiente y segura</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-lg" routerLink="/login">
+            Iniciar Sesión
+          </button>
+          <button class="btn btn-outline-light btn-lg" routerLink="/dashboard">
+            Ver Dashboard
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="container">
+      <h2 class="section-title">Nuestros Servicios</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <span class="govco-icon govco-user-icon"></span>
+            </div>
+            <h3>Gestión de Personas</h3>
+            <p>Administra el registro de personas de manera sencilla y organizada.</p>
+            <a routerLink="/dashboard" class="feature-link">Ir al Dashboard →</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <span class="govco-icon govco-search-icon"></span>
+            </div>
+            <h3>Buscador Avanzado</h3>
+            <p>Encuentra rápidamente la información que necesitas.</p>
+            <a routerLink="/buscador" class="feature-link">Ir al Buscador →</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <span class="govco-icon govco-lock-icon"></span>
+            </div>
+            <h3>Acceso Seguro</h3>
+            <p>Tu información protegida con los más altos estándares de seguridad.</p>
+            <a routerLink="/login" class="feature-link">Iniciar Sesión →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="home-footer">
+    <div class="container">
+      <p>&copy; 2026 Sistema de Gestión. Todos los derechos reservados.</p>
+    </div>
+  </footer>
 </div>
